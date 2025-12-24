@@ -1,23 +1,21 @@
 {
-  "name": "elixir-ls",
+  "name": "elixir-ls-test-args",
   "displayName": "ElixirLS: Elixir support and debugger",
-  "homepage": "https://github.com/elixir-lsp/elixir-ls",
+  "homepage": "https://github.com/diego-pandiello/vscode-elixir-ls",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elixir-lsp/vscode-elixir-ls.git"
+    "url": "https://github.com/diego-pandiello/vscode-elixir-ls.git"
   },
   "icon": "images/logo.png",
   "description": "Elixir support with debugger, autocomplete, and more - Powered by ElixirLS.",
   "author": "The Elixir community",
   "license": "MIT",
-  "publisher": "JakeBecker",
-  "version": "0.30.0",
+  "publisher": "DiegoPandiello",
+  "version": "0.30.1",
   "engines": {
     "vscode": "^1.99.0"
   },
-  "sponsor": {
-    "url": "https://github.com/sponsors/elixir-lsp"
-  },
+  "sponsor": {},
   "categories": [
     "Programming Languages",
     "Debuggers",
@@ -254,6 +252,24 @@
           "type": "integer",
           "description": "Set a specific port for the MCP server. If not set, uses `3789 + hash(workspace_path)` for predictable port assignment per workspace",
           "default": 0
+        },
+        "elixirLS.testDebugOptions": {
+          "scope": "resource",
+          "type": "object",
+          "description": "Options for test debugging via CodeLens and Test Explorer",
+          "default": {
+            "taskArgs": []
+          },
+          "properties": {
+            "taskArgs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [],
+              "description": "Additional arguments to pass to 'mix test' when debugging tests. Example: [\"--max-failures\", \"1\", \"--seed\", \"0\"]. Note: --trace is automatically added when debugging."
+            }
+          }
         }
       }
     },

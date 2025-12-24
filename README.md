@@ -103,6 +103,27 @@ Example:
 }
 ```
 
+### Customizing test debug arguments
+
+You can customize the arguments passed to `mix test` when debugging tests via CodeLens or the Test Explorer by configuring the `elixirLS.testDebugOptions` setting. This is useful for adding flags like `--max-failures`, `--seed`, etc.
+
+Add to your workspace or user settings (`.vscode/settings.json`):
+
+```json
+{
+  "elixirLS.testDebugOptions": {
+    "taskArgs": ["--max-failures", "1", "--seed", "0"]
+  }
+}
+```
+
+These custom arguments will be applied when:
+- Clicking "Debug" CodeLens links in test files
+- Using "Debug Test" from the Test Explorer
+- Right-clicking a test file and selecting "Debug Tests in Current File"
+
+Note: The `--trace` flag is automatically added when debugging tests to disable timeouts, so you don't need to include it in `taskArgs`.
+
 ### Add support for emmet
 
 `emmet` is a plugin that makes it easier to write HTML: https://code.visualstudio.com/docs/editor/emmet

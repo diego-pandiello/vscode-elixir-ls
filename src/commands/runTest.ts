@@ -267,5 +267,16 @@ function buildTestCommandArgs(args: RunTestArgs, debug: boolean): string[] {
   // debug tests in tracing mode to disable timeouts
   const maybeTrace = debug ? ["--trace"] : [];
 
-  return [...maybeTrace, ...result, ...COMMON_ARGS];
+  // Read custom test debug options from settings
+  const config = vscode.workspace.getConfiguration(
+    "elixirLS",
+    args.workspaceFolder,
+  );
+  const testDebugOptions = config.get<{ taskArgs?: string[] }>(
+    "testDebugOptions",
+    { taskArgs: [] },
+  );
+  const customArgs = testDebugOptions.taskArgs || [];
+
+  return [...maybeTrace, ...customArgs, ...result, ...COMMON_ARGS];
 }
