@@ -1,13 +1,13 @@
 {
   "name": "elixir-ls-test-args",
-  "displayName": "ElixirLS: Elixir support and debugger",
+  "displayName": "ElixirLS: Elixir support and debugger allowing test debug args",
   "homepage": "https://github.com/diego-pandiello/vscode-elixir-ls",
   "repository": {
     "type": "git",
     "url": "https://github.com/diego-pandiello/vscode-elixir-ls.git"
   },
   "icon": "images/logo.png",
-  "description": "Elixir support with debugger, autocomplete, and more - Powered by ElixirLS.",
+  "description": "Elixir support with debugger allowing test debug args, autocomplete, and more - Powered by ElixirLS.",
   "author": "The Elixir community",
   "license": "MIT",
   "publisher": "DiegoPandiello",
