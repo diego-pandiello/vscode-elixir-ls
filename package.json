@@ -15,7 +15,6 @@
   "engines": {
     "vscode": "^1.99.0"
   },
-  "sponsor": {},
   "categories": [
     "Programming Languages",
     "Debuggers",
