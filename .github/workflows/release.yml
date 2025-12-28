@@ -38,27 +38,10 @@ jobs:
           pat: "dummy"
           preRelease: true
           dryRun: true
-        
-      - name: set publisher for Visual Studio Marketplace
-        if: ${{ !contains(github.ref, '-rc.') }}
-        run: |
-          jq '.publisher = "JakeBecker"' package.json > package_temp.json
-          mv package_temp.json package.json
       - name: Publish to Visual Studio Marketplace
         uses: HaaLeo/publish-vscode-extension@v2
         if: ${{ !contains(github.ref, '-rc.') }}
         with:
           pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
           registryUrl: https://marketplace.visualstudio.com
-          # preRelease: ${{ contains(github.ref, '-rc.') }}
-      - name: set publisher for Open VSX Registry
-        if: ${{ !contains(github.ref, '-rc.') }}
-        run: |
-          jq '.publisher = "elixir-lsp"' package.json > package_temp.json
-          mv package_temp.json package.json
-      - name: Publish to Open VSX Registry
-        uses: HaaLeo/publish-vscode-extension@v2
-        if: ${{ !contains(github.ref, '-rc.') }}
-        with:
-          pat: ${{ secrets.OPEN_VSX_TOKEN }}
           # preRelease: ${{ contains(github.ref, '-rc.') }}
