@@ -72,6 +72,4 @@ MIX_ENV=prod mix compile
 echo ""
 echo "✓ elixir-ls updated and patched successfully!"
 echo ""
-echo "Don't forget to:"
-echo "  1. Test the changes"
-echo "  2. Commit the submodule update: git add elixir-ls && git commit -m 'Update elixir-ls submodule'"
+

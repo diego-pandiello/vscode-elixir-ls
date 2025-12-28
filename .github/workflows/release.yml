@@ -28,7 +28,7 @@ jobs:
           otp-version: 27.x
       - run: npm ci
       - name: Apply elixir-ls patches
-        run: ./scripts/apply-patches.sh
+        run: ./scripts/update-elixir-ls.sh
       - run: cd elixir-ls && mix deps.get
 
       - name: Dry run
