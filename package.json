@@ -1,22 +1,19 @@
 {
-  "name": "elixir-ls",
-  "displayName": "ElixirLS: Elixir support and debugger",
-  "homepage": "https://github.com/elixir-lsp/elixir-ls",
+  "name": "super-elixir-ls",
+  "displayName": "ElixirLS: Elixir support and debugger adapted for Super setup",
+  "homepage": "https://github.com/diego-pandiello/vscode-elixir-ls",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elixir-lsp/vscode-elixir-ls.git"
+    "url": "https://github.com/diego-pandiello/vscode-elixir-ls.git"
   },
   "icon": "images/logo.png",
   "description": "Elixir support with debugger, autocomplete, and more - Powered by ElixirLS.",
   "author": "The Elixir community",
   "license": "MIT",
-  "publisher": "JakeBecker",
-  "version": "0.30.0",
+  "publisher": "DiegoPandiello",
+  "version": "0.30.6",
   "engines": {
     "vscode": "^1.99.0"
-  },
-  "sponsor": {
-    "url": "https://github.com/sponsors/elixir-lsp"
   },
   "categories": [
     "Programming Languages",
