@@ -41,6 +41,9 @@ jobs:
         with:
           elixir-version: 1.18.x
           otp-version: 27.x
+      - name: Apply elixir-ls patches
+        run: ./scripts/apply-patches.sh
+        shell: bash
       - name: Resolve elixir-ls dependencies
         run: |
           cd elixir-ls

@@ -1,0 +1,20 @@
+diff --git a/apps/debug_adapter/lib/debug_adapter/server.ex b/apps/debug_adapter/lib/debug_adapter/server.ex
+index bd80b8b7..7c81c22f 100644
+--- a/apps/debug_adapter/lib/debug_adapter/server.ex
++++ b/apps/debug_adapter/lib/debug_adapter/server.ex
+@@ -2272,6 +2272,15 @@ defmodule ElixirLS.DebugAdapter.Server do
+       Mix.Task.run("app.start", [])
+     end
+ 
++    # When running tests, we need to start ExUnit before requiring/interpreting test files
++    # because test modules use ExUnit.Case which checks if ExUnit is started during compilation
++    if task == "test" and not config["noDebug"] do
++      # Start ExUnit with minimal configuration
++      # This ensures ExUnit is available when test files are interpreted
++      ExUnit.start(autorun: false)
++      Output.debugger_console("Started ExUnit for test debugging\n")
++    end
++
+     exclude_module_names =
+       config
+       |> Map.get("excludeModules", [])

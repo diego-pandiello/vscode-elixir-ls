@@ -8,3 +8,6 @@ elixir-ls-release/
 .claude
 CLAUDE.local.md
 .mcp.json
+
+# Patch backups
+patches/backup-*
