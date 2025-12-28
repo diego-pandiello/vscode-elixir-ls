@@ -10,7 +10,7 @@
   "description": "Elixir support with debugger, autocomplete, and more - Powered by ElixirLS.",
   "author": "The Elixir community",
   "license": "MIT",
-  "publisher": "diego.fernandez.pandiello",
+  "publisher": "diegofernandezpandiello",
   "version": "0.30.8",
   "engines": {
     "vscode": "^1.99.0"
