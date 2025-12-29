@@ -1,16 +1,16 @@
 {
   "name": "super-elixir-ls",
-  "displayName": "ElixirLS: Elixir support and debugger adapted for Super setup",
+  "displayName": "Super ElixirLS: Elixir support and debugger adapted for Super setup",
   "homepage": "https://github.com/diego-pandiello/vscode-elixir-ls",
   "repository": {
     "type": "git",
     "url": "https://github.com/diego-pandiello/vscode-elixir-ls.git"
   },
   "icon": "images/logo.png",
-  "description": "Elixir support with debugger, autocomplete, and more - Powered by ElixirLS.",
+  "description": "Elixir support for Super setup, based on ElixirLS",
   "author": "The Elixir community",
   "license": "MIT",
-  "publisher": "diegofernandezpandiello",
+  "publisher": "diegopandiello",
   "version": "0.30.11",
   "engines": {
     "vscode": "^1.99.0"
