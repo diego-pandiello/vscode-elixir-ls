@@ -8,10 +8,10 @@
   },
   "icon": "images/logo.png",
   "description": "Elixir support for Super setup, based on ElixirLS",
-  "author": "The Elixir community",
+  "author": "Diego Pandiello",
   "license": "MIT",
   "publisher": "diegopandiello",
-  "version": "0.30.11",
+  "version": "0.30.12",
   "engines": {
     "vscode": "^1.99.0"
   },
