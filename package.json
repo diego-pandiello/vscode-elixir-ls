@@ -1,13 +1,13 @@
 {
   "name": "super-elixir-ls",
-  "displayName": "Super ElixirLS: Elixir support and debugger adapted for Super setup",
-  "homepage": "https://github.com/diego-pandiello/vscode-elixir-ls",
+  "displayName": "Fork of ElixirLS. Adapted for Super setup",
+  "homepage": "https://github.com/diego-pandiello/super-vscode-elixir-ls",
   "repository": {
     "type": "git",
-    "url": "https://github.com/diego-pandiello/vscode-elixir-ls.git"
+    "url": "https://github.com/diego-pandiello/super-vscode-elixir-ls.git"
   },
   "icon": "images/logo.png",
-  "description": "Elixir support for Super setup, based on ElixirLS",
+  "description": "Fork from ElixirLS. Adapted for Super setup",
   "author": "Diego Pandiello",
   "license": "MIT",
   "publisher": "diegopandiello",
