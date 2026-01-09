@@ -1,13 +1,13 @@
 {
-  "name": "super-elixir-ls",
-  "displayName": "Fork of ElixirLS. Adapted for Super setup",
-  "homepage": "https://github.com/diego-pandiello/super-vscode-elixir-ls",
+  "name": "pandiello-backend-debugger",
+  "displayName": "Pandiello backend debugger",
+  "homepage": "https://github.com/diego-pandiello/pandiello-backend-debugger",
   "repository": {
     "type": "git",
-    "url": "https://github.com/diego-pandiello/super-vscode-elixir-ls.git"
+    "url": "https://github.com/diego-pandiello/pandiello-backend-debugger.git"
   },
   "icon": "images/logo.png",
-  "description": "Fork from ElixirLS. Adapted for Super setup",
+  "description": "This is a fork from a previous version of ElixirLS extension for VSCode with some added features for debugging backend applications.",
   "author": "Diego Pandiello",
   "license": "MIT",
   "publisher": "diegopandiello",
