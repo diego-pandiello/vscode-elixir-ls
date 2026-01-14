@@ -1,0 +1,41 @@
+diff --git a/scripts/installer.exs b/scripts/installer.exs
+index 94d13404..654b91df 100644
+--- a/scripts/installer.exs
++++ b/scripts/installer.exs
+@@ -635,30 +635,18 @@ defmodule ElixirLS.Installer do
+   end
+
+   def install(force?) do
+-    if local?() do
+-      dir = local_dir()
+-      IO.puts(:stderr, "Installing local ElixirLS from #{dir}")
+-      IO.puts(:stderr, "Running in #{File.cwd!()}")
++    dir = local_dir()
++    IO.puts(:stderr, "Installing local ElixirLS from #{dir}")
++    IO.puts(:stderr, "Running in #{File.cwd!()}")
+
+-      run_mix_install({:local, dir}, force?)
+-    else
+-      {:tag, tag} = get_release()
+-      IO.puts(:stderr, "Installing ElixirLS release #{tag}")
+-      IO.puts(:stderr, "Running in #{File.cwd!()}")
+-
+-      run_mix_install({:tag, tag}, force?)
+-    end
++    run_mix_install({:local, dir}, force?)
+
+     IO.puts(:stderr, "Install complete")
+   end
+
+   def install_for_launch do
+-    if local?() do
+-      dir = Path.expand("#{__DIR__}/..")
+-      run_mix_install({:local, dir}, false)
+-    else
+-      run_mix_install(get_release(), false)
+-    end
++    dir = local_dir()
++    run_mix_install({:local, dir}, false)
+   end
+
+   def install_with_retry do

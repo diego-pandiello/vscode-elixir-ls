@@ -19,6 +19,22 @@ This directory contains patches that are applied to the elixir-ls submodule to a
 - Adds `ExUnit.start(autorun: false)` before requiring test files
 - Only activates when task is "test" and debugging is enabled
 
+### `0002-use-local-elixir-ls-installation.patch`
+
+**Purpose:** Forces the installer to always use the local ElixirLS source code bundled with the extension.
+
+**Why needed:** This extension bundles the ElixirLS source code directly instead of downloading it from GitHub. This allows for:
+- Faster installation (no network dependency)
+- Consistent version control
+- Ability to apply custom patches
+- Support for offline development
+
+**Changes:**
+- Location: `scripts/installer.exs`
+- Removes conditional logic that checks `ELS_LOCAL` environment variable
+- Always uses `local_dir()` to point to the bundled ElixirLS source
+- `install/1` and `install_for_launch/0` functions now exclusively use local installation
+
 ## Usage
 
 ### Initial Setup

@@ -7,9 +7,13 @@ src/**
 node_modules
 .gitignore
 tsconfig.json
-elixir-ls/**
 .github/**
-.gitignore
-tsconfig.json
 .vscodeignore
 .eslint*
+elixir-ls/_build/**
+elixir-ls/deps/**
+elixir-ls/.elixir_ls/**
+elixir-ls/**/.elixir_ls/**
+elixir-ls/**/node_modules/**
+elixir-ls/**/*.beam
+elixir-ls/.git/**

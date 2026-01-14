@@ -18,10 +18,7 @@ export function buildCommand(
 
   const command = platformCommand(kind);
 
-  const dir =
-    process.env.ELS_LOCAL === "1"
-      ? "./elixir-ls/scripts/"
-      : "./elixir-ls-release/";
+  const dir = "./elixir-ls/scripts/";
 
   return lsOverridePath
     ? path.join(lsOverridePath, command)

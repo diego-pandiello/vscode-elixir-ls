@@ -812,7 +812,7 @@
   },
   "scripts": {
     "release-elixir-ls": "cd elixir-ls && mix elixir_ls.release2 -o ../elixir-ls-release",
-    "vscode:prepublish": "npm-run-all release-elixir-ls esbuild-release",
+    "vscode:prepublish": "npm run esbuild-release",
     "mixcompile": "mix compile",
     "mixcompile-esbuild": "npm-run-all mixcompile esbuild",
     "clean": "rimraf ./out",

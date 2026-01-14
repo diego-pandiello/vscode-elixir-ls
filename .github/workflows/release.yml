@@ -21,16 +21,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "20.x"
-      - name: Setup Elixir
-        uses: erlef/setup-beam@v1
-        with:
-          elixir-version: 1.18.x
-          otp-version: 27.x
       - run: npm ci
       - name: Apply elixir-ls patches
         run: ./scripts/apply-patches.sh
-      - name: Compile elixir-ls with patches
-        run: cd elixir-ls && mix deps.get && MIX_ENV=prod mix compile
 
       - name: Dry run
         uses: HaaLeo/publish-vscode-extension@v2
